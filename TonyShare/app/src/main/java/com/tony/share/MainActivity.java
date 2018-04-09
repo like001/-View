@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.tony.share.opengl.OpenGLActivity;
+import com.tony.share.ui.AlphabetActivity;
 import com.tony.share.ui.LoveActivity;
 import com.tony.share.ui.StepProgressActivity;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     private Button mBtnOpenGL;
     private Button mBtnLove;
     private Button mBtnScale;
+    private  Button mBtnAlpha;
     public static final boolean IS_TEST = true;
 
     @Override
@@ -29,12 +31,17 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         setContentView(R.layout.activity_main);
         initView();
         if(IS_TEST){
-            test();
+            mBtnScale.post(new Runnable() {
+                @Override
+                public void run() {
+                    test();
+                }
+            });
         }
     }
 
     private void test() {
-        ValueAnimator animator = ValueAnimator.ofInt(mBtnScale.getWidth(), 1080);
+        ValueAnimator animator = ValueAnimator.ofInt(mBtnScale.getMeasuredWidth(), 1080);
         animator.setDuration(3000);
         animator.setRepeatCount(4);
         animator.setRepeatMode(ValueAnimator.REVERSE);
@@ -60,6 +67,8 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         mBtnLove = (Button) findViewById(R.id.btn_love);
         mBtnLove.setOnClickListener(this);
         mBtnScale = (Button) findViewById(R.id.btn_scale);
+        mBtnAlpha = (Button) findViewById(R.id.btn_alpha);
+        mBtnAlpha.setOnClickListener(this);
     }
 
     @Override
@@ -76,6 +85,10 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 break;
             case R.id.btn_love:
                 pIntent = new Intent(this, LoveActivity.class);
+                startActivity(pIntent);
+                break;
+            case R.id.btn_alpha:
+                pIntent = new Intent(this, AlphabetActivity.class);
                 startActivity(pIntent);
                 break;
             default:

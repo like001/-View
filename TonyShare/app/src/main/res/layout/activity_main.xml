@@ -17,14 +17,22 @@
         android:text="花束_贝塞尔"
         android:id="@+id/btn_love"
         />
+
+    <Button
+        android:text="字母表选择"
+        android:id="@+id/btn_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="属性动画缩放"
+        android:id="@+id/btn_scale"
+        android:layout_width="200px"
+        android:layout_height="wrap_content" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="OpenGL实例"
         android:id="@+id/btn_opengl"
         />
-    <Button
-        android:id="@+id/btn_scale"
-        android:layout_width="300px"
-        android:layout_height="wrap_content" />
 </LinearLayout>
