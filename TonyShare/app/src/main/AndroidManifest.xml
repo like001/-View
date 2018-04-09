@@ -16,8 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.StepProgressActivity">
-        </activity>
+        <activity android:name=".ui.StepProgressActivity"></activity>
+        <activity android:name=".opengl.OpenGLActivity"></activity>
+        <activity android:name=".ui.LoveActivity"></activity>
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.tony.share.MainActivity">
     <Button
         android:layout_width="match_parent"
@@ -10,4 +11,20 @@
         android:text="步数统计进度条"
         android:id="@+id/btn_step"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="花束_贝塞尔"
+        android:id="@+id/btn_love"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OpenGL实例"
+        android:id="@+id/btn_opengl"
+        />
+    <Button
+        android:id="@+id/btn_scale"
+        android:layout_width="300px"
+        android:layout_height="wrap_content" />
 </LinearLayout>
